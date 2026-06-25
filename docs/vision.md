@@ -51,3 +51,19 @@ Positive customer feedback
 • Improve weekly
 
 • Have fun
+
+# Engineering Principles
+
+1. Automate repetitive work.
+
+2. Prefer systems over manual processes.
+
+3. Keep inventory at zero.
+
+4. Build features customers actually use.
+
+5. Ship early.
+
+6. Improve continuously.
+
+7. Every commit should move the product forward.
