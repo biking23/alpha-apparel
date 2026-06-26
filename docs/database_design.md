@@ -1,13 +1,23 @@
 # Current ER Diagram
 
 # Table Purposes
-tickers - Stores the publically traded companies for which Alpah Apparel can generate designs
-themes - Stores reusable investment concepts that define the message of a design
-styles - Stores reusable visual identities that influence how artwork is generated
-designs - Stores unique AI-generated design concepts created from combinations of ticker, theme and style
-product_variants - Stores purchasable merchandise created from a design
+* tickers - Stores the publically traded companies for which Alpah Apparel can generate designs
+* themes - Stores reusable investment concepts that define the message of a design
+* styles - Stores reusable visual identities that influence how artwork is generated
+* designs - Stores unique AI-generated design concepts created from combinations of ticker, theme and style
+* product_variants - Stores purchasable merchandise created from a design
 
 # Future Database Expansion
+
+* GeneratedAssets
+* Users
+* Orders
+* Payments
+* Reviews
+* Analytics
+* Coupons
+* Inventory
+* GenerationJobs
 
 # Database Design Principles
 
