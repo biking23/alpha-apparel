@@ -7,7 +7,7 @@ styles - Stores reusable visual identities that influence how artwork is generat
 designs - Stores unique AI-generated design concepts created from combinations of ticker, theme and style
 product_variants - Stores purchasable merchandise created from a design
 
-# Future tables
+# Future Database Expansion
 
 # Database Design Principles
 
