@@ -3,6 +3,10 @@
 ## Version 1.0
 
 ## Date: 2026-06-30
+Decision: Use the standard CPython 3.13 installation with venv for Alpha Apparel instead of Anaconda.
+
+Reason: Alpha Apparel is a FastAPI web application rather than a data science project. Using standard Python simplifies dependency management, aligns with common backend deployment environments, and makes the development setup more portable.
+
 Status
 Frozen
 Purpose
