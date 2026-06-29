@@ -1,5 +1,8 @@
 # Current ER Diagram
 
+# Version One
+https://dbdiagram.io/d/Alpha-Apparel-Database-6a3ec6dcb3ebc94a7da049e0
+
 # Table Purposes
 * tickers - Stores the publically traded companies for which Alpah Apparel can generate designs
 * themes - Stores reusable investment concepts that define the message of a design
