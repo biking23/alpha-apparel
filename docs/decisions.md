@@ -1,3 +1,20 @@
+# Version History
+
+## Version 1.0
+
+## Date: 2026-06-30
+Status
+Frozen
+Purpose
+Initial MVP database supporting AI-generated investor apparel.
+Major Decisions
+- Integer primary keys
+- Generated prompts stored with each design
+- Product variants derived from designs
+- Country retained for future regional collections
+- No prompts table
+- No generated_assets table
+
 ## 2026-06-25
 # Database Design Decisions
 
