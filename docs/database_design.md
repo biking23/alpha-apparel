@@ -14,33 +14,21 @@
 One ticker can have many generated designs.
 
 Example:
-
 * MU
-
   * Proud Owner
   * Diamond Hands
   * Earnings Survivor
-
 ---
-
 ## Themes → Designs
 
 One theme can be reused across many companies.
-
 Example:
-
 "Proud Owner"
-
 ↓
-
 MU
-
 ↓
-
 NVDA
-
 ↓
-
 RKLB
 
 ---
@@ -48,37 +36,39 @@ RKLB
 ## Styles → Designs
 
 One style can be reused for many generated designs.
-
 Example:
-
 "Vintage"
-
 ↓
-
 Applied to every ticker.
 
 ---
-
 ## Humor Levels → Designs
-
 One humor level can be reused across many designs.
-
 Example:
-
 "Meme"
-
 ↓
-
 Diamond Hands
-
 ↓
-
 Bought the Dip
-
 ↓
-
 YOLO
 
+# Version History
+
+## Version 1.0
+
+Date: 2026-06-30
+Status
+Frozen
+Purpose
+Initial MVP database supporting AI-generated investor apparel.
+Major Decisions
+- Integer primary keys
+- Generated prompts stored with each design
+- Product variants derived from designs
+- Country retained for future regional collections
+- No prompts table
+- No generated_assets table
 
 # Future Database Expansion
 
