@@ -1,3 +1,26 @@
+############################################
+# Alpha Apparel
+#
+# Based on the official GitHub Python
+# .getignore template.
+#################################################
+
+#Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+
+#Secrets
+.env
+
+# VS Code
+.vscode/
+
+#Logs
+*.log   
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
