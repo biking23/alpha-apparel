@@ -15,3 +15,14 @@ Created roadmap.
 Next:
 
 Design project architecture.
+
+## Day 2
+Development Notes
+
+Python Version
+
+3.13.3
+
+Virtual Environment
+
+.\.venv\Scripts\Activate.ps1
