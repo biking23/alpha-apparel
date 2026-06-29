@@ -8,3 +8,9 @@ def root():
         "application": "Alpha Apparel",
         "status": "online"
     }
+
+@app.get("/health")
+def health():   
+    return {
+        "status": "healthy"
+    }
