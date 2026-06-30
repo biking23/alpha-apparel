@@ -9,6 +9,9 @@
 __pycache__/
 *.py[cod]
 
+#SQLite databases
+*db
+
 # Virtual environments
 .venv/
 
