@@ -46,8 +46,17 @@ class Ticker(Base):
     industry: Mapped[str]
     country: Mapped[str]
     is_active: Mapped[bool]
-    created_at: Mapped[datetime]
-    updated_at: Mapped[datetime]
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime,
+        default=datetime.now,
+        nullable=False,
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime,
+        default=datetime.now,
+        onupdate=datetime.now,
+        nullable=False,
+    )
 
     def __repr__(self) -> str:
         return f"<Ticker(symbol='{self.ticker}')>"
