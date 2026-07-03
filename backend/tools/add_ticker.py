@@ -22,8 +22,6 @@ Used By
 from app.database.database import SessionLocal
 from app.models.ticker import Ticker
 
-from sqlalchemy import select
-
 session = SessionLocal()
 
 
@@ -36,9 +34,7 @@ mu = Ticker(
     is_active=True,
 )
 
-tickers = session.scalars(select(Ticker)).all()
-for ticker in tickers:
-    print(ticker)
+
 
 session.add(mu)
 session.commit()
