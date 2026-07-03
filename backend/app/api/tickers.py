@@ -1,12 +1,11 @@
 #Responsible for everything related to ticker endpoints
 from fastapi import APIRouter, Depends
 
-from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.database.dependencies import get_db
-from app.models.ticker import Ticker
 from app.schemas.ticker import TickerResponse
+from app.services import ticker_service
 
 router = APIRouter(
     prefix="/tickers",
@@ -15,8 +14,9 @@ router = APIRouter(
 
 @router.get(
         "",
-        response_model=list[TickerResponse]
-        )
-def get_tickers(db: Session = Depends(get_db)):
-    all_tickers = db.scalars(select(Ticker)).all()
-    return all_tickers
+        response_model=list[TickerResponse],
+)
+def get_tickers(
+    db: Session = Depends(get_db),
+    ):
+    return ticker_service.get_active_tickers(db)
