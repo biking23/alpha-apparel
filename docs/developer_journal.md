@@ -87,3 +87,19 @@ Schemas represent API contracts.
 What should Future Us remember?
 Endpoints should focus on business logic. Resource management (database sessions, authentication, etc.) belongs in reusable dependencies.
 
+What did we build?
+API routers
+Cleaner application structure
+Automatic OpenAPI documentation
+Better separation of responsibilities
+
+What did we learn?
+APIRouter represents one area of the application.
+main.py should compose the application, not implement it.
+FastAPI generates documentation from our type hints and schemas.
+Refactoring should preserve behavior while improving structure.
+
+Future Us
+If a file begins accumulating unrelated responsibilities, ask whether it deserves its own module rather than continuing to grow.
+That's essentially what we did today.
+
