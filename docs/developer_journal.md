@@ -70,4 +70,20 @@ Those are lessons that will keep paying dividends.
 What should Future Us remember?
 Developer utilities belong in backend/tools/ and should be run as modules (python -m tools.<tool_name>).
 
+## Day 4
+What did we build?
+First REST API endpoint
+Database dependency injection
+Automatic session management
+Querying through HTTP
+
+What did we learn?
+yield pauses a function instead of ending it.
+finally always executes, even if an exception occurs.
+FastAPI dependency injection keeps endpoint code clean.
+Models represent database tables.
+Schemas represent API contracts.
+
+What should Future Us remember?
+Endpoints should focus on business logic. Resource management (database sessions, authentication, etc.) belongs in reusable dependencies.
 
