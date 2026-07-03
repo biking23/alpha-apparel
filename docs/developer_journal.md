@@ -86,7 +86,7 @@ Schemas represent API contracts.
 
 What should Future Us remember?
 Endpoints should focus on business logic. Resource management (database sessions, authentication, etc.) belongs in reusable dependencies.
-
+-----------------------------------------------------------------------------
 What did we build?
 API routers
 Cleaner application structure
@@ -101,5 +101,20 @@ Refactoring should preserve behavior while improving structure.
 
 Future Us
 If a file begins accumulating unrelated responsibilities, ask whether it deserves its own module rather than continuing to grow.
-That's essentially what we did today.
+---------------------------
+What did we build?
+✅ Service layer
+✅ First business logic function
+✅ Cleaner router
+✅ Better separation of responsibilities
+
+What did we learn?
+
+A router should answer "What endpoint is this?"
+
+A service should answer "How do we solve this business problem?"
+
+Future Us
+
+When a route starts containing business decisions, move that logic into a service before adding more features.
 
