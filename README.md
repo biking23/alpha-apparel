@@ -23,4 +23,3 @@ Python 3.13.x
 ```
 
 You're now ready to work on Alpha Apparel.
-```
