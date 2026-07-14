@@ -118,3 +118,12 @@ Future Us
 
 When a route starts containing business decisions, move that logic into a service before adding more features.
 
+## Day 5
+
+Tests:
+
+Created a test folder inside backend
+
+Every bug we fix should receive a test so it never quietly happens again. Run the tests to double check
+
+
