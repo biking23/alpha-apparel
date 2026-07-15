@@ -25,7 +25,7 @@ from sqlalchemy.orm import Session
 
 from app.models.ticker import Ticker
 from app.schemas.ticker import TickerCreate
-from datetime import datetime
+from fastapi import HTTPException
 
 
 def get_active_tickers(db: Session) -> list[Ticker]:
@@ -41,7 +41,17 @@ def get_active_tickers(db: Session) -> list[Ticker]:
     return db.scalars(statement).all()
 
 def create_ticker(db: Session, ticker_data: TickerCreate) -> Ticker:
-
+    #check for existing ticker
+    statement = (
+        select(Ticker)
+        .where(Ticker.ticker == ticker_data.ticker)
+    )
+    ticker = db.scalar(statement)
+    if ticker:
+        raise HTTPException(
+            status_code=409,
+            detail=f"Ticker '{ticker_data.ticker}' already exists.",
+            )
     # Create a new Ticker object
     ticker = Ticker(
         ticker=ticker_data.ticker,

@@ -19,6 +19,9 @@ from app.database.base import Base
 from app.models.ticker import Ticker
 from app.services.ticker_service import get_active_tickers
 from app.services.ticker_service import create_ticker
+import pytest
+from app.schemas.ticker import TickerCreate
+from fastapi import HTTPException
 
 def test_get_active_tickers_returns_only_active_tickers():
 
@@ -87,3 +90,33 @@ def test_create_ticker_creates_active_ticker():
         assert new_ticker.is_active is True
     finally:
         session.close()
+
+def test_duplicate_ticker_creation_raises_error(): 
+    
+    engine = create_engine("sqlite:///:memory:")
+
+    Base.metadata.create_all(bind=engine)
+
+    SessionLocal = sessionmaker(bind=engine)
+
+    session = SessionLocal()
+
+    try:
+        ticker_data = TickerCreate(
+            ticker="TSM",
+            company_name="Taiwan Semiconductor Manufacturing",
+            sector="Technology",
+            industry="Semiconductors",
+            country="Taiwan",
+        )
+
+        # Create the first ticker
+        create_ticker(session, ticker_data)
+
+        # Attempt to create a duplicate ticker
+        with pytest.raises(HTTPException) as exc_info:
+            create_ticker(session, ticker_data)
+        assert exc_info.value.status_code == 409
+        assert exc_info.value.detail == "Ticker 'TSM' already exists."
+    finally:
+        session.close()     
