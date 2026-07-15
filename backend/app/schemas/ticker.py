@@ -34,3 +34,9 @@ class TickerResponse(BaseModel):
     created_at: datetime
     updated_at: datetime
 
+class TickerCreate(BaseModel):
+    ticker: str
+    company_name: str
+    sector: str
+    industry: str
+    country: str

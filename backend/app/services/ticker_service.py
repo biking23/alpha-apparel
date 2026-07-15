@@ -24,6 +24,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.ticker import Ticker
+from app.schemas.ticker import TickerCreate
+from datetime import datetime
 
 
 def get_active_tickers(db: Session) -> list[Ticker]:
@@ -37,3 +39,23 @@ def get_active_tickers(db: Session) -> list[Ticker]:
     )
 
     return db.scalars(statement).all()
+
+def create_ticker(db: Session, ticker_data: TickerCreate) -> Ticker:
+
+    # Create a new Ticker object
+    ticker = Ticker(
+        ticker=ticker_data.ticker,
+        company_name=ticker_data.company_name,
+        sector=ticker_data.sector,
+        industry=ticker_data.industry,
+        country=ticker_data.country,
+        is_active=True
+    )
+    # Add to database
+    db.add(ticker)
+    # Commit transaction
+    db.commit()   
+    # Refresh object
+    db.refresh(ticker)
+    # Return ticker
+    return ticker
