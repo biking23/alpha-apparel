@@ -126,4 +126,9 @@ Created a test folder inside backend
 
 Every bug we fix should receive a test so it never quietly happens again. Run the tests to double check
 
+## Day 5
+A service doesn't exist to talk to the database.
+
+A service exists to enforce business rules before talking to the database.
+
 
