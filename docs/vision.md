@@ -6,6 +6,8 @@ Build the world's first AI-powered investor apparel platform.
 
 Allow anyone to enter a stock ticker and instantly generate unique finance-themed merchandise.
 
+Alpha Apparel transforms a stock ticker and a creative style into a product-ready design.
+
 ---
 
 ## MVP
