@@ -126,7 +126,7 @@ Created a test folder inside backend
 
 Every bug we fix should receive a test so it never quietly happens again. Run the tests to double check
 
-## Day 5
+## Day 6
 A service doesn't exist to talk to the database.
 
 A service exists to enforce business rules before talking to the database.
@@ -134,5 +134,19 @@ A service exists to enforce business rules before talking to the database.
 Duplicate validation:
 
 Added a duplicate check to services/ticker_service.py. Will check if a ticker already in the database and provide a useful error message instead of SQLAlchemy message. Also added a test to verify the error is handled properly. Beware of ValueError vs HTTPException
+
+## Day 7
+
+Going forward, after each model generation reiterate what is the table's purpose
+
+Business Definition
+
+For Ticker:
+
+A Ticker represents a publicly traded company supported by Alpha Apparel.
+
+For Design:
+
+A Design represents the reproducible creative output generated from a ticker and a set of creative parameters.
 
 
